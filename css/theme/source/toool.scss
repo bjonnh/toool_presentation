@@ -1,0 +1,102 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 42px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #ff0000;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 1.2em;
+$heading2Size: 1.0em;
+$heading3Size: 0.8em;
+$heading4Size: 0.7em;
+
+.reveal section img {
+    border: none !important;
+}
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+.reveal h1 {
+    margin: 0 0 0 0 !important;
+    color: blue;
+    border-bottom: 6px solid #df0d32;
+    width:100%;
+    position:fixed;
+    left:0;
+    top: 0px;
+}
+#navigation-bar {
+position: fixed;
+left: 0;
+bottom: 2px;
+width: 100%;
+height: 50px;
+z-index: 20;
+background-color: #000;
+color: #fff;
+font-family: Helvetica, Arial, sans-serif;
+text-align: right;
+display: table;
+text-align:left;
+}
+
+#navigation-bar nav {
+padding: 15px 0;
+text-align: center;
+
+}
+
+#navigation-bar a {
+  border-top: 1em;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#navigation-bar a:last-child {
+border-right: none;
+}
+#navigation-bar a:hover {
+text-decoration: underline;
+}
+
+#navigation-bar img {
+    position:absolute;
+    border-top: 2em;
+    width: 6em;
+    left:0px;
+    padding: 0.5em;
+
+}
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
